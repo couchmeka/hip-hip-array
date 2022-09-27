@@ -187,14 +187,18 @@ const students = [
   // Challenge 9 Code
   
 
- let students2 = students.slice(3, 10)
- let index9 = 0;
+ 
 
- while(students2.length > index9)
- {
-  console.log(students2[index9]);
-   index9++;
- } 
+
+index99 = 3; //ensures will start at index 3
+while (index99 < 11){
+  console.log(students[index99])
+  index99++;
+}
+
+
+
+
 
 
 
@@ -210,18 +214,34 @@ const students = [
   // Do NOT use slice, you will be using that for the next challenge!
   // Challenge 10 Code
 
- let cut1 = students.splice(0,3)
- let cut2 = students.splice(10)
- let finalCut = cut1.concat(cut2);
- let index10 = 0;
+//Original
+//  let cut1 = students.splice(0,3)
+//  let cut2 = students.splice(10)
+//  let finalCut = cut1.concat(cut2);
+//  let index10 = 0;
  
- while (finalCut.length > index10)
-{
-  console.log(finalCut[index10]);
-  index10++;
-}
+//  while (finalCut.length > index10)
+// {
+//   console.log(finalCut[index10]);
+//   index10++;
+// }
  
 
+let studentCopy = [];
+let index10 = 3;
+
+while (index10 < 11)
+{
+    studentCopy.push(students[index10]);
+    index10++;
+    console.log(studentCopy);
+}
+index10 = 0;
+while (index10 > studentCopy.length)
+{ 
+console.log(studentCopy[index10]);
+index10++;
+}
 
   console.log("\n");
   console.log("Challenge 11");
@@ -230,18 +250,20 @@ const students = [
   // Challenge 11 Code
   
   let index11 = 0;
-  let newSlice = students.slice(3,10);
+  let newSlice = students.slice(3,-2);
 
-  while (students.length > index11)
+  while (newSlice.length > index11)
      {
        console.log(newSlice[index11]);
        index11++;
+     }
+     index11 = 0;
        while (students.length > index11)
     {
       console.log(students[index11])
       index11++;
     }
-     }
+     
     
 
 
@@ -253,11 +275,11 @@ const students = [
   // Challenge 12 Code
 
   let index12 = 0;
-  let spliceDino = dinosaurs.splice(4,6);
+  let spliceDino = dinosaurs.splice(4,3);
   while(index12 < dinosaurs.length)
   {
     
-    console.log(spliceDino[index12] + " " + dinosaurs[index12]);
+    console.log(dinosaurs[index12]);
     index12++;
     
   }
